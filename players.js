@@ -9,5 +9,5 @@ data = `{
             [61, 255, 43],
             [214, 236, 255]
           ],
-          "round1": ["Smriti","Sai Sudhir","Samarth","Rimzim","Nikhil","Divya","Nigel","Dhruthi","Yashwanth","Kashish","Pranav","Abhishek","Aditi","Sampurn","Sanket","Arnav"]
+          "round1": ["Smriti","Sai Sudhir","Samarth","Rimzim","Nikhil","Divya","Nigel","Dhruthi","Yashwanth","Kashish","Pranav","Abhishek","Aditi","Sampurn","Sanket","Arnav", "Nishan","Amisha","Nihal","Sarthak"]
           }`;

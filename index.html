@@ -22,9 +22,9 @@
         <div class="player l1" id="l1-2-2">5</div>
         <div class="player l1" id="l1-3-1">6</div>
         <div class="player l1" id="l1-3-2">7</div>
-        <!--<div class="player l1" id="l1-4-1">8</div>
+        <div class="player l1" id="l1-4-1">8</div>
         <div class="player l1" id="l1-4-2">9</div>
-        <div class="player l1" id="l1-5-1">10</div>
+        <!--<div class="player l1" id="l1-5-1">10</div>
         <div class="player l1" id="l1-5-2">11</div>
         <div class="player l1" id="l1-6-1">12</div>
         <div class="player l1" id="l1-6-2">13</div>
@@ -46,6 +46,7 @@
         <div class="player l3" id="l3-0-2"></div>
         <div class="player l3" id="l3-1-1"></div>
         <div class="player l3" id="l3-1-2"></div>
+        <div class="player l3" id="l3-2-1"></div>
       </div>
       <div class="vertical-container" id="left4">
         <div class="player l4" id="l4-0-1"></div>
@@ -63,6 +64,7 @@
         <div class="player r3" id="r3-0-2"></div>
         <div class="player r3" id="r3-1-1"></div>
         <div class="player r3" id="r3-1-2"></div>
+        <div class="player r3" id="r3-2-1"></div>
       </div>
       <!--<div class="vertical-container" id="right2">
         <div class="player r2" id="r2-0-1"></div>
@@ -83,9 +85,9 @@
         <div class="player r1" id="r1-2-2">5</div>
         <div class="player r1" id="r1-3-1">6</div>
         <div class="player r1" id="r1-3-2">7</div>
-        <!--<div class="player r1" id="r1-4-1">8</div>
+        <div class="player r1" id="r1-4-1">8</div>
         <div class="player r1" id="r1-4-2">9</div>
-        <div class="player r1" id="r1-5-1">10</div>
+        <!--<div class="player r1" id="r1-5-1">10</div>
         <div class="player r1" id="r1-5-2">11</div>
         <div class="player r1" id="r1-6-1">12</div>
         <div class="player r1" id="r1-6-2">13</div>
@@ -110,7 +112,7 @@
 
       colors = mydata.colors;
 
-      for (var i = 0; i < 4; i++) {
+      for (var i = 0; i < 5; i++) {
         var id_str = "l1-"+i.toString();
         var id_str_1 = id_str+"-1";
         var id_str_2 = id_str+"-2";
@@ -129,7 +131,7 @@
       }
 
       players = mydata.round1;
-      for (var i = 0; i < players.length && i < 4; i++) {
+      for (var i = 0; i < players.length && i < 5; i++) {
         var id_str = "l1-"+i.toString();
         var id_str_1 = id_str+"-1";
         var id_str_2 = id_str+"-2";
@@ -139,8 +141,8 @@
         elem.innerHTML = players[2*i+1];
       }
 
-      for (var i = 8; i < players.length && i < 8+4; i++) {
-        var id_str = "r1-"+(i-8).toString();
+      for (var i = 10; i < players.length && i < 10+5; i++) {
+        var id_str = "r1-"+(i-10).toString();
         var id_str_1 = id_str+"-1";
         var id_str_2 = id_str+"-2";
         elem = document.getElementById(id_str_1);
