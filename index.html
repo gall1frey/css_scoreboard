@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet.css">
+    <title> Scoreboard </title>
+  </head>
+  <body>
+    <div class="scoreboard-title">
+      <img src="assets/big boy logo.png" class="title-img" alt="">
+    </div>
+    <div class="score-container">
+      <div class="vertical-container" id="left1">
+        <div class="player l1" id="l1-0-1">0</div>
+        <div class="player l1" id="l1-0-2">1</div>
+        <div class="player l1" id="l1-1-1">2</div>
+        <div class="player l1" id="l1-1-2">3</div>
+        <div class="player l1" id="l1-2-1">4</div>
+        <div class="player l1" id="l1-2-2">5</div>
+        <div class="player l1" id="l1-3-1">6</div>
+        <div class="player l1" id="l1-3-2">7</div>
+        <div class="player l1" id="l1-4-1">8</div>
+        <div class="player l1" id="l1-4-2">9</div>
+        <div class="player l1" id="l1-5-1">10</div>
+        <div class="player l1" id="l1-5-2">11</div>
+        <div class="player l1" id="l1-6-1">12</div>
+        <div class="player l1" id="l1-6-2">13</div>
+        <div class="player l1" id="l1-7-1">14</div>
+        <div class="player l1" id="l1-7-2">15</div>
+      </div>
+      <div class="vertical-container" id="left2">
+        <div class="player l2" id="l2-0-1"></div>
+        <div class="player l2" id="l2-0-2"></div>
+        <div class="player l2" id="l2-1-1"></div>
+        <div class="player l2" id="l2-1-2"></div>
+        <div class="player l2" id="l2-2-1"></div>
+        <div class="player l2" id="l2-2-2"></div>
+        <div class="player l2" id="l2-3-1"></div>
+        <div class="player l2" id="l2-3-2"></div>
+      </div>
+      <div class="vertical-container" id="left3">
+        <div class="player l3" id="l3-0-1"></div>
+        <div class="player l3" id="l3-0-2"></div>
+        <div class="player l3" id="l3-1-1"></div>
+        <div class="player l3" id="l3-1-2"></div>
+      </div>
+      <div class="vertical-container" id="left4">
+        <div class="player l4" id="l4-0-1"></div>
+        <div class="player l4" id="l4-0-2"></div>
+      </div>
+      <div class="vertical-container" id="mid">
+        <div class="player m" id="m-0"></div>
+      </div>
+      <div class="vertical-container" id="right4">
+        <div class="player r4" id="r4-0-1"></div>
+        <div class="player r4" id="r4-0-2"></div>
+      </div>
+      <div class="vertical-container" id="right3">
+        <div class="player r3" id="r3-0-1"></div>
+        <div class="player r3" id="r3-0-2"></div>
+        <div class="player r3" id="r3-1-1"></div>
+        <div class="player r3" id="r3-1-2"></div>
+      </div>
+      <div class="vertical-container" id="right2">
+        <div class="player r2" id="r2-0-1"></div>
+        <div class="player r2" id="r2-0-2"></div>
+        <div class="player r2" id="r2-1-1"></div>
+        <div class="player r2" id="r2-1-2"></div>
+        <div class="player r2" id="r2-2-1"></div>
+        <div class="player r2" id="r2-2-2"></div>
+        <div class="player r2" id="r2-3-1"></div>
+        <div class="player r2" id="r2-3-2"></div>
+      </div>
+      <div class="vertical-container" id="right1">
+        <div class="player r1" id="r1-0-1">0</div>
+        <div class="player r1" id="r1-0-2">1</div>
+        <div class="player r1" id="r1-1-1">2</div>
+        <div class="player r1" id="r1-1-2">3</div>
+        <div class="player r1" id="r1-2-1">4</div>
+        <div class="player r1" id="r1-2-2">5</div>
+        <div class="player r1" id="r1-3-1">6</div>
+        <div class="player r1" id="r1-3-2">7</div>
+        <div class="player r1" id="r1-4-1">8</div>
+        <div class="player r1" id="r1-4-2">9</div>
+        <div class="player r1" id="r1-5-1">10</div>
+        <div class="player r1" id="r1-5-2">11</div>
+        <div class="player r1" id="r1-6-1">12</div>
+        <div class="player r1" id="r1-6-2">13</div>
+        <div class="player r1" id="r1-7-1">14</div>
+        <div class="player r1" id="r1-7-2">15</div>
+      </div>
+    </div>
+    <script type="text/javascript" src="players.js"></script>
+    <script type="text/javascript">
+
+      var color_grey = [128,128,128];
+
+      function grey_round1(c) {
+        Array.from(document.getElementsByClassName(c)).forEach(
+            function(element, index, array) {
+                element.style.backgroundColor = "rgba("+color_grey[0]+","+color_grey[1]+","+color_grey[2]+",0.5)"
+            }
+        );
+      }
+
+      var mydata = JSON.parse(data);
+
+      colors = mydata.colors;
+
+      for (var i = 0; i < 8; i++) {
+        var id_str = "l1-"+i.toString();
+        var id_str_1 = id_str+"-1";
+        var id_str_2 = id_str+"-2";
+        elem = document.getElementById(id_str_1);
+        elem.style.backgroundColor = "rgba("+colors[i%colors.length][0]+","+colors[i%colors.length][1]+","+colors[i%colors.length][2]+",0.5)"
+        elem = document.getElementById(id_str_2);
+        elem.style.backgroundColor = "rgba("+colors[i%colors.length][0]+","+colors[i%colors.length][1]+","+colors[i%colors.length][2]+",0.5)"
+
+        var id_str = "r1-"+i.toString();
+        var id_str_1 = id_str+"-1";
+        var id_str_2 = id_str+"-2";
+        elem = document.getElementById(id_str_1);
+        elem.style.backgroundColor = "rgba("+colors[i%colors.length][0]+","+colors[i%colors.length][1]+","+colors[i%colors.length][2]+",0.5)"
+        elem = document.getElementById(id_str_2);
+        elem.style.backgroundColor = "rgba("+colors[i%colors.length][0]+","+colors[i%colors.length][1]+","+colors[i%colors.length][2]+",0.5)"
+      }
+
+      players = mydata.round1;
+      for (var i = 0; i < players.length && i < 8; i++) {
+        var id_str = "l1-"+i.toString();
+        var id_str_1 = id_str+"-1";
+        var id_str_2 = id_str+"-2";
+        elem = document.getElementById(id_str_1);
+        elem.innerHTML = players[2*i];
+        elem = document.getElementById(id_str_2);
+        elem.innerHTML = players[2*i+1];
+      }
+
+      for (var i = 16; i < players.length && i < 8+16; i++) {
+        var id_str = "r1-"+(i-16).toString();
+        var id_str_1 = id_str+"-1";
+        var id_str_2 = id_str+"-2";
+        elem = document.getElementById(id_str_1);
+        elem.innerHTML = players[i];
+        elem = document.getElementById(id_str_2);
+        elem.innerHTML = players[i+1];
+      }
+
+    </script>
+  </body>
+</html>
